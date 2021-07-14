@@ -1,26 +1,69 @@
 main {
+  border: 1px solid;
+  border-radius: 4px;
+  box-shadow: 0px 0px 10px rgba(128, 128, 128, 0.699);
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+    'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   width: 400px;
   height: 250px;
   margin: 50px auto;
-  border: 1px solid;
 }
 
-i {
-  font-size: 60px;
+button {
+  background-color: transparent;
+  border: 2px solid grey;
+  border-radius: 15px;
+  color: grey;
+  font-weight: 600;
+  padding: 5px 10px;
+  text-transform: uppercase;
+  transition: scale 0.5 ease-in-out;
+  width: 100px;
 }
 
-i:first-of-type {
-  color: green;
+button:disabled {
+  background-color: rgba(128, 128, 128, 0.4);
+  border: none;
+  color: white;
 }
 
-i:last-of-type {
-  color: red;
+button:hover {
+  background-color: grey;
+  color: white;
+  transform: scale(1.05);
 }
 
 #choose-container,
 #check-container {
   text-align: center;
-  margin-top: 100px;
+  margin-top: 90px;
+  position: relative;
+}
+
+#go-back {
+  font-size: 30px;
+  color: grey;
+  position: absolute;
+  top: -75px;
+  left: 15px;
+}
+
+#go-back:hover {
+  color: rgb(88, 88, 88);
+  transform: scale(1.1);
+}
+
+#correct,
+#incorrect {
+  font-size: 60px;
+}
+
+#correct {
+  color: green;
+}
+
+#incorrect {
+  color: red;
 }
 
 .invisible {

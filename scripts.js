@@ -3,6 +3,7 @@ window.SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecogn
 const chooseContainer = document.getElementById('choose-container'),
       checkContainer = document.getElementById('check-container'),
       languageBtns = document.getElementById('language-btns'),
+      goBackBtn = document.getElementById('go-back'),
       correctIcon = document.getElementById('correct'),
       incorrectIcon = document.getElementById('incorrect'),
       checkBtn = document.getElementById('check-btn'),
@@ -36,6 +37,7 @@ const chooseContainer = document.getElementById('choose-container'),
 let phrases;
 
 languageBtns.addEventListener('click', chooseLang);
+goBackBtn.addEventListener('click', toggleContainers);
 checkBtn.addEventListener('click', startCheck);
 
 function displayIcon(icon) {
@@ -63,7 +65,7 @@ function handleCheck(e) {
   recognition.stop();
 }
 
-function handleSpeechEnd(e) {
+function handleSpeechEnd() {
   checkBtn.removeAttribute('disabled');
 }
 
@@ -97,14 +99,16 @@ function chooseLang(e) {
       break;
   }
   
-  chooseContainer.classList.toggle('invisible');
-  checkContainer.classList.toggle('invisible');
-
   randomPhrase(lang);
+  toggleContainers();
 }
 
 function randomPhrase() {
   const number = Math.floor(Math.random() * phrases.length);
   phrase.innerHTML = phrases[number];
 }
-      
+   
+function toggleContainers() {
+  chooseContainer.classList.toggle('invisible');
+  checkContainer.classList.toggle('invisible');
+}
