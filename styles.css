@@ -1,0 +1,33 @@
+main {
+  width: 400px;
+  height: 250px;
+  margin: 50px auto;
+  border: 1px solid;
+}
+
+i {
+  font-size: 60px;
+}
+
+i:first-of-type {
+  color: green;
+}
+
+i:last-of-type {
+  color: red;
+}
+
+#choose-container,
+#check-container {
+  text-align: center;
+  margin-top: 100px;
+}
+
+ {
+  text-align: center;
+  margin-top: 100px;
+}
+
+.invisible {
+  display: none;
+}

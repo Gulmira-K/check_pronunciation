@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/e2264a75f2.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="styles.css" />
+    <title>Check Pronunciation</title>
+  </head>
+  <body>
+    <main>
+      <div id="choose-container">
+        <h5>Choose language:</h5>
+        <div id="language-btns">
+          <button id="eng">English</button>
+          <button id="rus">Russian</button>
+          <button id="deu">German</button>
+        </div>
+      </div>
+      <div id="check-container" class="invisible">
+        <i class="fas fa-check-circle invisible" id='correct'></i>
+        <i class="fas fa-times-circle invisible" id='incorrect'></i>
+        <p id="phrase">Hello</p>
+        <button id="check-btn">Start checking</button>
+      </div>
+    </main>
+    <script src="scripts.js"></script>
+  </body>
+</html>
